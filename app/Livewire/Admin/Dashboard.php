@@ -6,6 +6,8 @@ use Livewire\Component;
 
 class Dashboard extends Component
 {
+    public $title = "Dashboard";
+    
     #[Layout('layouts.app')]
     public function render()
     {

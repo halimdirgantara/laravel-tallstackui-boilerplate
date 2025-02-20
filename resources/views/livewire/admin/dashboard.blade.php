@@ -1,3 +1,8 @@
 <div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
+    <x-tall-card>
+        <x-slot:header>
+            {{ $title }}
+        </x-slot:header>
+        TallStackUI
+    </x-tall-card>
 </div>
