@@ -16,10 +16,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased">
-    <div>
-        @yield('content')
-    </div>
-
+    {{ $slot }}
     @livewireScripts
     @stack('scripts')
 </body>
