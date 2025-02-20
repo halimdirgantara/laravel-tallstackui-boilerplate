@@ -10,8 +10,13 @@
         <x-tall-card>
             <form wire:submit.prevent="login">
                 <div class="space-y-4">
-                    <x-tall-input wire:model="email" label="Email *" invalidate />
-                    <x-tall-password wire:model="password" label="Password *" invalidate />
+                    <x-tall-input name="email" wire:model="email" label="Email *" invalidate />
+                    <x-tall-password name="password" wire:model="password" label="Password *" invalidate />
+                    <x-tall-checkbox name="remember" wire:model="remember">
+                        <x-slot:label>
+                            Remember Me
+                        </x-slot:label>
+                    </x-tall-checkbox>
                     <div class="flex justify-between items-center">
                         <x-tall-button type="submit" text="Login" />
                         <a href="#" class="text-sm text-gray-600 hover:text-gray-900">Forgot Password?</a>
