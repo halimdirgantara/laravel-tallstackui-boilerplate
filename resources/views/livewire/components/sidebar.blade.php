@@ -1,6 +1,7 @@
 <div>
     <x-tall-side-bar>
-        <x-tall-side-bar.item text="Home" icon="home" :route="route('dashboard')" />
-        <x-tall-side-bar.item text="Settings" icon="cog"    />
+        @foreach ($menu as $item)
+            <x-tall-side-bar.item text="{{ $item['text'] }}" icon="{{ $item['icon'] }}" :route="$item['route']" />
+        @endforeach
     </x-tall-side-bar>
 </div>
