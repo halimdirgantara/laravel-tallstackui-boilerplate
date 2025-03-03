@@ -2,7 +2,7 @@
     <x-tall-layout.header>
         <x-slot:right>
             <x-tall-dropdown text="Hello, {{ auth()->user()->name }}!">
-                <form method="POST" action="#">
+                <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <x-tall-dropdown.items text="Logout"
                         onclick="event.preventDefault(); this.closest('form').submit();" />

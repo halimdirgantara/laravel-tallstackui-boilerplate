@@ -9,4 +9,8 @@ Route::get('/login', Login::class)->name('login');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
+    Route::post('/logout', function () {
+        auth()->logout();
+        return redirect()->route('login');
+    })->name('logout');
 });
