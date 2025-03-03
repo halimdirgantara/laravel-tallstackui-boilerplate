@@ -181,9 +181,8 @@ class Login extends Component
         $this->resetValidation();
     }
 
-    #[Layout('layouts.auth')]
     public function render()
     {
-        return view('livewire.auth.login');
+        return view('livewire.auth.login')->layout('layouts.auth');
     }
 }
